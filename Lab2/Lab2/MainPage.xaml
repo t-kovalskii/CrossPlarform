@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.MainPage"
+             xmlns:viewmodels="clr-namespace:Lab2.ViewModels"
+             xmlns:controls="clr-namespace:Lab2.Controls">
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Padding="30" Spacing="20">
+        <Label x:Name="DateTimeLabel" Text="{Binding CurrentDateTime}" FontSize="24" />
+        <Button Text="Update Time" Command="{Binding UpdateTimeCommand}" />
+        <controls:BorderedEntry Placeholder="Enter here..." />
+        <Label Text="{Binding CurrentDeviceinfo}" FontSize="24" />
+        <Label x:Name="ToDoItemLabel" Text="{Binding CurrentToDoItem}" FontSize="24" />
+        <Button Text="Update ToDo" Command="{Binding UpdateToDoItemCommand}" />
+    </StackLayout>
+</ContentPage>
+
